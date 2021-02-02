@@ -85,7 +85,7 @@ I used a histogram to depict all of the data in this data set. I did this becaus
 
 I reviewed Brittney's lab report at this URL: https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-brittneynelsen/issues/1 
 
-Brittney reviewed my lab report at this URL: 
+Brittney reviewed my lab report at this URL:  https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-Ethan-Dotzler.git 
 
 ## Session Info
 

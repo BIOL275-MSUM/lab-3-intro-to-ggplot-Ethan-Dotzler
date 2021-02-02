@@ -12,17 +12,22 @@ distinct(firefly_data)
 
 count(firefly_data)
  
-ggplot(data = firefly_data) 
+ggplot(data = firefly_data)
+
 ggplot(data = firefly_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass)) 
+
 ggplot(data = firefly_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass), binwidth = 0.005) 
+
 ggplot(data = firefly_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass), binwidth = 0.005,
                  boundary = 0, closed = "left") 
+
 ggplot(data = firelfy_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass), binwidth = 0.005,
                  boundary = 0, closed = "left")
+
 ggplot(data = firefly_data) +
   geom_histogram(mapping = aes(x = spermatophoreMass), binwidth = 0.005,
                  fill = "#C5351B", color = "black") +
