@@ -1,25 +1,24 @@
 ---
 title: "Lab 3: Introduction to ggplot"
-author: "___"
+author: "Ethan Dotzler"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
-> INSTRUCTIONS: REMOVE THIS LINE AND REPLACE ____ WITH YOUR OWN TEXT
 
-Welcome to my Lab 2 repository for Quantitative Biology BIOL 275 at MSUM.
+Welcome to my Lab 3 repository for Quantitative Biology BIOL 275 at MSUM.
 
 ## Lab objectives
 
 The objectives of this lab are:
 
-- ___
-- ___
+- Learn how to enter data into RStudio
+- Learn how to create graphs and tables with given data
 
 ## Repository contents
 
 The repository contains the following scripts:
 
 - [Lab Report 3](lab-report.md)
-- ___
+- [tutorial-walk-through.R](tutorial-walk-through.R)
 

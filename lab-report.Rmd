@@ -1,6 +1,6 @@
 ---
 title: "Lab 3 Report"
-author: "___"
+author: "Ethan Dotzler"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---
@@ -11,19 +11,33 @@ Instructions for this lab report can be found on [Your assignment section of Lab
 
 > A. Insert an R code chunk and create a graph depicting the frequency distribution of the 35 mass measurements. It should have legible text and appropriate axis labels.
 
-\_\_\_
+```{r}
+library(tidyverse)
+
+firefly_data <- read_csv("https://whitlockschluter.zoology.ubc.ca/wp-content/data/chapter02/chap02q19FireflySpermatophoreMass.csv")
+
+ggplot(data = firefly_data) +
+  geom_histogram(mapping = aes(x = spermatophoreMass), binwidth = 0.005,
+                 fill = "#C5351B", color = "black") +
+  labs(x = "Mass of Spermatophore (mg)", y = "Frequency (number of fireflies)") +
+  theme_classic() +
+  theme(
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black", size = rel(1))
+  )
+```
 
 > B. What type of graph did you choose in part (A)? Why?
 
-\_\_\_
+I chose to do a histogram. I chose to do a histogram because it was easier to show all of the data relating to the fireflies using one, while also making it easier for the viewer to see the distribution.
 
 > C. Describe the shape of the frequency distribution. What are its main features?
 
-\_\_\_
+It is very inconsistent, varying between low points and high points with an outlier group.
 
 > D. What term would be used to describe the largest measurement in the frequency distribution? You can refer to the lecture slides, your notes, or the textbook.
 
-\_\_\_
+The largest measurement in the frequency distribution would be the median. 
 
 ## Bird orders
 
@@ -38,25 +52,40 @@ birds <- ebird_taxonomy %>%           # start with the ebird_taxonomy data
 
 > E. How many bird species are in the new birds dataset? How did you find out?
 
-\_\_\_
+10,721 species. By looking in the birds data view tab. 
 
 > H. How many orders are there? You can get this right by counting on the graph, but you will only get full points if you use some code to figure it out.
 
-\_\_\_
+There are 41 orders. I determined this by creating a contingency table for the data and by reviewing that table. 
 
 > F. Insert an R code chunk and create a graph depicting the distribution of orders in the birds dataset. Sort the orders with the most frequent on the left. It should have legible text and appropriate axis labels.
 
-\_\_\_
+```{r}
+ggplot(data = birds) +
+  geom_bar(mapping = aes(x = fct_infreq(order)), fill = "#C5351B", 
+           width = .8) + 
+  scale_y_log10()+
+  labs(x = "Order", y = "Frequency (number of birds)", 
+       title = "Number of bird species in each order", 
+       subtitle = "*Note that numbers are in log scale to better show all data.") +
+  theme_classic(base_size = 12) +
+  theme(
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(color = "black", size = rel(0.65)),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    axis.ticks.x = element_blank()
+  )
+```
 
 > G. What kind of graph did you create? Why?
 
-\_\_\_
+I used a histogram to depict all of the data in this data set. I did this because a histogram made it easier to show all of the different Orders of Birds that were described in the data set, while also allowing me to show the distribution of all the data points of the Orders in decreasing fashion. I also scaled the graph in terms of log, to make each of the data points for each Order be closer to each other to make the graph visually flow a lot better. 
 
 ## Links to peer review
 
-I reviewed \_\_\_'s lab report at this URL: \_\_\_
+I reviewed Brittney's lab report at this URL: https://github.com/BIOL275-MSUM/lab-3-intro-to-ggplot-brittneynelsen/issues/1 
 
-\_\_\_ reviewed my lab report at this URL: \_\_\_
+Brittney reviewed my lab report at this URL: 
 
 ## Session Info
 
